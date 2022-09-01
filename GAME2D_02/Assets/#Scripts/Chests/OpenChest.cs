@@ -19,7 +19,6 @@ public class OpenChest : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("Open");
-            ChestDisplay.isOpen = true;     //Set status of chest when player opened the chest
         }
     }
 
@@ -29,26 +28,34 @@ public class OpenChest : MonoBehaviour
         reward.SetActive(true);
     }
 
+    // Used in animation event
     public void PlusPlayerStats()
     {
         PlayerCombat.Instance.maxHealth += 20;
         PlayerCombat.Instance.healthBar.SetMaxHealth(PlayerCombat.Instance.maxHealth);
         PlayerCombat.Instance.attackDamage += 5;
+
+        PlayerPrefs.SetInt("HP", PlayerCombat.Instance.maxHealth);
+        PlayerPrefs.SetInt("ATK", PlayerCombat.Instance.attackDamage);
+
         reward.SetActive(false);
     }
 
+    // Used in animation event
     public void PlusHeartAmount()
     {
         items.heartAmount++;
         reward.SetActive(false);
     }
 
+    // Used in animation event
     public void PlusHPAmount()
     {
         items.hpAmount++;
         reward.SetActive(false);
     }
 
+    // Used in animation event
     public void PlusCoinAmount()
     {
         items.coinAmount++;

@@ -6,6 +6,9 @@ public class GameOverUI : MonoBehaviour
     public GameObject gameOverUI;
     SceneFader sceneFader;
 
+    string loadLevelDefault = "Level01";
+    string loadMainMenu = "MainMenu";
+
     private void Awake()
     {
         sceneFader = FindObjectOfType<SceneFader>();
@@ -14,18 +17,18 @@ public class GameOverUI : MonoBehaviour
     public void SetGameOverUI()
     {
         gameOverUI.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void PlayAgain()
     {
-        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
+        sceneFader.FadeTo(loadLevelDefault);
     }
 
     public virtual void Menu()
     {
         Debug.Log("go to menu !!!!");
+        sceneFader.FadeTo(loadMainMenu);
+        Time.timeScale = 1f;
     }
 
 }

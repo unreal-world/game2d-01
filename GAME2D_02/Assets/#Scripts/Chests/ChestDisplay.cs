@@ -5,15 +5,27 @@ using UnityEngine;
 public class ChestDisplay : MonoBehaviour
 {
     public ChestSO chest;
-    public static bool isOpen = false;    //use to display status of chest
 
     // Start is called before the first frame update
     void Start()
     {
-        if (isOpen == false)
-            LoadChest(chest);
-        else
+        if (PlayerPrefs.GetInt(gameObject.name) == 1)       //Chest is opened
             GetComponent<SpriteRenderer>().enabled = true;
+        else
+            LoadChest(chest);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SetChestIsOpened();
+        }
+    }
+
+    void SetChestIsOpened()
+    {
+        PlayerPrefs.SetInt(gameObject.name, 1);     //key value = 1: chest is opened
     }
 
     void LoadChest(ChestSO chest)

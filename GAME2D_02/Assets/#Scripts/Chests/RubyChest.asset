@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: RubyChest
   m_EditorClassIdentifier: 
   chestPrefab: {fileID: 8539008879050023529, guid: 987950e481d85314c98e0b74d8aaf983, type: 3}
+  chestName: RubyChest
+  description: Obtain an item to add one life

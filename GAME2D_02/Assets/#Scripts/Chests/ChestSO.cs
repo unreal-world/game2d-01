@@ -6,4 +6,6 @@ using UnityEngine;
 public class ChestSO : ScriptableObject
 {
     public GameObject chestPrefab;
+    public string chestName;
+    public string description;
 }

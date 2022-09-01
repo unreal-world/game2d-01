@@ -13,7 +13,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public int maxHealth = 100;
     public int attackDamage = 15;
-    int currentHealth;
+    public int currentHealth;
 
     public static PlayerCombat Instance;
 
@@ -22,14 +22,32 @@ public class PlayerCombat : MonoBehaviour
         Instance = this;        //Singleton
 
         attackPoint = GetComponentInChildren<Transform>().Find("attackPoint");
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        healthBar.SetHealth(currentHealth);
+
+        if(PlayerPrefs.GetInt("HP") != 0)
+        {
+            maxHealth = PlayerPrefs.GetInt("HP");
+            attackDamage = PlayerPrefs.GetInt("ATK");
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
+        }
+        else
+        {
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
+        }
+
         playerAnimator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            items.UseItemRestoreHP();
+            healthBar.SetHealth(currentHealth);
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -59,11 +77,13 @@ public class PlayerCombat : MonoBehaviour
         if (currentHealth <= 0 && items.heartAmount > 1)
         {
             this.Death();
+            Items.loadCurrentItems = true;   //
             Invoke("RePlay", 1f);
         }
         else if(currentHealth <= 0 && items.heartAmount <= 1)
         {
             this.Death();
+            Items.loadCurrentItems = false;  //
             Invoke("GameOver", 1f);
         }
     }

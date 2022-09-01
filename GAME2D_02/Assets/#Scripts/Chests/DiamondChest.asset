@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: DiamondChest
   m_EditorClassIdentifier: 
   chestPrefab: {fileID: 3694208749807057657, guid: 5ae6f6e7f2928d843a1abeb9683e1e96, type: 3}
+  chestName: DiamondChest
+  description: Use to upgrade player's power

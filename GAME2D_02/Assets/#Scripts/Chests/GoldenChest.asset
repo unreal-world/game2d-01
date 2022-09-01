@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GoldenChest
   m_EditorClassIdentifier: 
   chestPrefab: {fileID: 2991002913144516515, guid: 3656cad7f0e7de34abd975909339de03, type: 3}
+  chestName: GoldenChest
+  description: Obtain an item to restore HP

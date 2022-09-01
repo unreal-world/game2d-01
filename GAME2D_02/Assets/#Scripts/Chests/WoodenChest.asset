@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: WoodenChest
   m_EditorClassIdentifier: 
   chestPrefab: {fileID: 8847382892163098539, guid: e1f57ead6a34c9848bdf75af859229d3, type: 3}
+  chestName: WoodenChest
+  description: Obtain an item to add one coin
