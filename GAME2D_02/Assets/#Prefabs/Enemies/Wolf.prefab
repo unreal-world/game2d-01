@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 1234349132862862131}
   m_Layer: 0
   m_Name: Wolf
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +507,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.790497, y: 5.6633816}
+  m_Size: {x: 10.217636, y: 5.6633816}
   m_EdgeRadius: 0
 --- !u!114 &6889476345571756495
 MonoBehaviour:

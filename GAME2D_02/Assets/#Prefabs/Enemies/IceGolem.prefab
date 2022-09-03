@@ -217,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.846274, y: 7.104024}
+  m_Size: {x: 9.414083, y: 7.104024}
   m_EdgeRadius: 0
 --- !u!114 &7421655617622221344
 MonoBehaviour:
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 1690172749998495559}
   m_Layer: 0
   m_Name: IceGolem
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

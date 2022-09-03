@@ -13,7 +13,14 @@ public class LoadNextScene : MonoBehaviour
         {
             //Save items in current scene and load it in next scene
             items.SaveItems();
+
+            //Save all stats of player when load next scene
+            PlayerPrefs.SetInt("currentHP", PlayerCombat.Instance.currentHealth);
+            PlayerPrefs.SetInt("maxHP", PlayerCombat.Instance.maxHealth);
+            PlayerPrefs.SetInt("ATK", PlayerCombat.Instance.attackDamage);
+
             Items.loadCurrentItems = true;
+
             sceneFader.FadeTo(levelToLoad);          
         }
     }

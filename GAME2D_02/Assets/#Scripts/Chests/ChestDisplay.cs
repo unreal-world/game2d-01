@@ -9,7 +9,7 @@ public class ChestDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt(gameObject.name) == 1)       //Chest is opened
+        if (PlayerPrefs.GetInt(gameObject.name) == 1)       //if Chest is opened
             GetComponent<SpriteRenderer>().enabled = true;
         else
             LoadChest(chest);

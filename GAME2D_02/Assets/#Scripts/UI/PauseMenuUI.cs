@@ -21,10 +21,12 @@ public class PauseMenuUI : MonoBehaviour
         if (pauseMenuUI.activeSelf)
         {
             Time.timeScale = 0f;
+            AudioListener.volume = 0f;
         }
         else
         {
             Time.timeScale = 1f;
+            AudioListener.volume = 1f;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenChest : MonoBehaviour
 {
     public Animator animator;
-    public GameObject reward;
+    public GameObject reward;   //display reward of chest
     public Items items;
 
     private void Awake()
@@ -33,9 +33,11 @@ public class OpenChest : MonoBehaviour
     {
         PlayerCombat.Instance.maxHealth += 20;
         PlayerCombat.Instance.healthBar.SetMaxHealth(PlayerCombat.Instance.maxHealth);
-        PlayerCombat.Instance.attackDamage += 5;
-
-        PlayerPrefs.SetInt("HP", PlayerCombat.Instance.maxHealth);
+        PlayerCombat.Instance.healthBar.SetHealth(PlayerCombat.Instance.currentHealth);
+        PlayerCombat.Instance.attackDamage += 10;
+        
+        //Save maxHP and ATK when open the diamond chest
+        PlayerPrefs.SetInt("maxHP", PlayerCombat.Instance.maxHealth);
         PlayerPrefs.SetInt("ATK", PlayerCombat.Instance.attackDamage);
 
         reward.SetActive(false);

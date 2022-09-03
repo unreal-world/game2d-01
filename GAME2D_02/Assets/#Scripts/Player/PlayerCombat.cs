@@ -12,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRange = 0.5f;
     public int maxHealth = 100;
-    public int attackDamage = 15;
+    public int attackDamage = 30;
     public int currentHealth;
 
     public static PlayerCombat Instance;
@@ -23,11 +23,13 @@ public class PlayerCombat : MonoBehaviour
 
         attackPoint = GetComponentInChildren<Transform>().Find("attackPoint");
 
-        if(PlayerPrefs.GetInt("HP") != 0)
+        if(PlayerPrefs.GetInt("currentHP") != 0 || PlayerPrefs.GetInt("maxHP") != 0 || PlayerPrefs.GetInt("ATK") != 0)
         {
-            maxHealth = PlayerPrefs.GetInt("HP");
+            //Set all stats of player when start current scene
+            maxHealth = PlayerPrefs.GetInt("maxHP");
             attackDamage = PlayerPrefs.GetInt("ATK");
-            currentHealth = maxHealth;
+            currentHealth = PlayerPrefs.GetInt("currentHP");
+
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
@@ -77,13 +79,14 @@ public class PlayerCombat : MonoBehaviour
         if (currentHealth <= 0 && items.heartAmount > 1)
         {
             this.Death();
-            Items.loadCurrentItems = true;   //
+            Items.loadCurrentItems = true;   
+            PlayerPrefs.SetInt("currentHP", maxHealth);//mean that player has full HP when replay the scene
             Invoke("RePlay", 1f);
         }
         else if(currentHealth <= 0 && items.heartAmount <= 1)
         {
             this.Death();
-            Items.loadCurrentItems = false;  //
+            Items.loadCurrentItems = false;  
             Invoke("GameOver", 1f);
         }
     }
@@ -103,6 +106,8 @@ public class PlayerCombat : MonoBehaviour
         items.heartAmount--;
 
         items.SaveItems();  // save current items
+
+        GetComponent<HeroKnight>().enabled = false;
 
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;

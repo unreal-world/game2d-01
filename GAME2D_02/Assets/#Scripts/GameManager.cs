@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
 
     public static void GameOver()
     {
-        FindObjectOfType<HeroKnight>().enabled = false;
         FindObjectOfType<GameOverUI>().SetGameOverUI();
         FindObjectOfType<PauseMenuUI>().enabled = false;
+
         PlayerPrefs.DeleteAll();
+
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
     }
 
     public static void RePlay()

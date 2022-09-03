@@ -22,13 +22,17 @@ public class GameOverUI : MonoBehaviour
     public void PlayAgain()
     {
         sceneFader.FadeTo(loadLevelDefault);
+
+        Time.timeScale = 1f;
+        AudioListener.volume = 1f;
     }
 
     public virtual void Menu()
     {
-        Debug.Log("go to menu !!!!");
         sceneFader.FadeTo(loadMainMenu);
+
         Time.timeScale = 1f;
+        AudioListener.volume = 1f;
     }
 
 }

@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 363605851782133674}
   m_Layer: 0
   m_Name: LightBandit
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &2166239411886882205
 Animator:
@@ -378,7 +378,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.299581, y: 3.2205052}
+  m_Size: {x: 5.5215373, y: 3.2205052}
   m_EdgeRadius: 0
 --- !u!114 &2166239411917225196
 MonoBehaviour:
@@ -449,7 +449,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.410698, y: 0.35889053}
+  m_Size: {x: 4.2228036, y: 0.35889053}
   m_EdgeRadius: 0
 --- !u!114 &2166239412780377603
 MonoBehaviour:
