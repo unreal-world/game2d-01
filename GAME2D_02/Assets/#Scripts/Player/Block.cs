@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-
     public Collider2D col;
 
     private void Update()

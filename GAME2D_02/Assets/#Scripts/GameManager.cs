@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
         Time.timeScale = 0f;
-        AudioListener.volume = 0f;
     }
 
     public static void RePlay()

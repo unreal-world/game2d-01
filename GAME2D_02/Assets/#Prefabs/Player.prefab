@@ -318,14 +318,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 9112512354123600951}
+  blockPoint: {fileID: 9112512353643157627}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
   playerAnimator: {fileID: 0}
   healthBar: {fileID: 0}
+  items: {fileID: 0}
   attackRange: 0.91
   maxHealth: 100
   attackDamage: 30
+  currentHealth: 0
 --- !u!114 &5072569246540398948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9112512353643157572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.973, z: 0}
+  m_LocalPosition: {x: 0.3, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

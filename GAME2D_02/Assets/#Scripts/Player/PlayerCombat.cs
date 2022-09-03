@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Transform attackPoint;
+    public Transform blockPoint;
     public LayerMask enemyLayers;
     public Animator playerAnimator;
     public HealthBar healthBar;
@@ -56,14 +57,16 @@ public class PlayerCombat : MonoBehaviour
             this.Attack();
         }
 
-        // Rotate attackRange -------
+        // Rotate attackRange and blockRange -------
         if (GetComponent<SpriteRenderer>().flipX)
         {
             attackPoint.localPosition = new Vector3(-1f, 0.8f, 0f);
+            blockPoint.localPosition = new Vector3(-0.15f, 1f, 0f);
         }
         else
         {
             attackPoint.localPosition = new Vector3(1f, 0.8f, 0f);
+            blockPoint.localPosition = new Vector3(0.3f, 1f, 0f);
         }
         // ---------------------------
             
@@ -72,6 +75,7 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
         healthBar.SetHealth(currentHealth);
 
         playerAnimator.SetTrigger("Hurt");
@@ -79,14 +83,19 @@ public class PlayerCombat : MonoBehaviour
         if (currentHealth <= 0 && items.heartAmount > 1)
         {
             this.Death();
+
             Items.loadCurrentItems = true;   
+
             PlayerPrefs.SetInt("currentHP", maxHealth);//mean that player has full HP when replay the scene
+            
             Invoke("RePlay", 1f);
         }
         else if(currentHealth <= 0 && items.heartAmount <= 1)
         {
             this.Death();
+
             Items.loadCurrentItems = false;  
+
             Invoke("GameOver", 1f);
         }
     }
@@ -111,6 +120,7 @@ public class PlayerCombat : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
+
         playerAnimator.SetTrigger("Death");
     }
 
