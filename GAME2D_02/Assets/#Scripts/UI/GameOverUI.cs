@@ -23,6 +23,8 @@ public class GameOverUI : MonoBehaviour
     {
         sceneFader.FadeTo(loadLevelDefault);
 
+        PlayerPrefs.DeleteAll();
+
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
     }

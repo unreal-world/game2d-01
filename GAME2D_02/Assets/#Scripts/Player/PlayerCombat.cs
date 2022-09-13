@@ -117,7 +117,6 @@ public class PlayerCombat : MonoBehaviour
         items.SaveItems();  // save current items
 
         GetComponent<HeroKnight>().enabled = false;
-
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
 
