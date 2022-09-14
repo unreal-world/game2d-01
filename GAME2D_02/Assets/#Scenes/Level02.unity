@@ -1804,7 +1804,7 @@ GameObject:
   - component: {fileID: 186720751}
   - component: {fileID: 186720752}
   m_Layer: 0
-  m_Name: WoodenChest
+  m_Name: WoodenChest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2586,7 +2586,7 @@ GameObject:
   - component: {fileID: 250548133}
   - component: {fileID: 250548132}
   m_Layer: 0
-  m_Name: RubyChest (1)
+  m_Name: RubyChest (1)_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5712,7 +5712,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 2.70138e-40, y: -5.40275e-40, z: 0, w: 1}
+  m_LocalRotation: {x: 2.70344e-40, y: -5.40687e-40, z: 0, w: 1}
   m_LocalPosition: {x: -215.82, y: -13.459999, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67029,7 +67029,7 @@ GameObject:
   - component: {fileID: 969977649}
   - component: {fileID: 969977648}
   m_Layer: 0
-  m_Name: WoodenChest (1)
+  m_Name: WoodenChest (1)_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68974,7 +68974,7 @@ GameObject:
   - component: {fileID: 1108912035}
   - component: {fileID: 1108912034}
   m_Layer: 0
-  m_Name: GoldenChest (2)
+  m_Name: GoldenChest (2)_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69270,7 +69270,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7791411, y: 1}
+    m_SensorSize: {x: 1.7768362, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -71501,7 +71501,7 @@ GameObject:
   - component: {fileID: 1397922682}
   - component: {fileID: 1397922683}
   m_Layer: 0
-  m_Name: GoldenChest
+  m_Name: GoldenChest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71969,7 +71969,7 @@ GameObject:
   - component: {fileID: 1417296342}
   - component: {fileID: 1417296345}
   m_Layer: 0
-  m_Name: DiamondChest
+  m_Name: DiamondChest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72755,7 +72755,7 @@ GameObject:
   - component: {fileID: 1468964941}
   - component: {fileID: 1468964940}
   m_Layer: 0
-  m_Name: GoldenChest (1)
+  m_Name: GoldenChest (1)_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80093,7 +80093,7 @@ GameObject:
   - component: {fileID: 1964347037}
   - component: {fileID: 1964347038}
   m_Layer: 0
-  m_Name: RubyChest
+  m_Name: RubyChest_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
