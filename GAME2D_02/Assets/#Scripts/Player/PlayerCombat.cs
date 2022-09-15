@@ -26,10 +26,7 @@ public class PlayerCombat : MonoBehaviour
 
         if(PlayerPrefs.GetInt("currentHP") != 0 || PlayerPrefs.GetInt("maxHP") != 0 || PlayerPrefs.GetInt("ATK") != 0)
         {
-            //Set all stats of player when start current scene
-            maxHealth = PlayerPrefs.GetInt("maxHP");
-            attackDamage = PlayerPrefs.GetInt("ATK");
-            currentHealth = PlayerPrefs.GetInt("currentHP");
+            SetPlayerStats();
 
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
@@ -37,6 +34,7 @@ public class PlayerCombat : MonoBehaviour
         else
         {
             currentHealth = maxHealth;
+
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
@@ -100,6 +98,14 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    void SetPlayerStats()
+    {
+        //Set all stats of player when start current scene
+        maxHealth = PlayerPrefs.GetInt("maxHP");
+        attackDamage = PlayerPrefs.GetInt("ATK");
+        currentHealth = PlayerPrefs.GetInt("currentHP");
+    }
+
     void SavePlayerStats()
     {
         PlayerPrefs.SetInt("maxHP", maxHealth);
@@ -126,6 +132,8 @@ public class PlayerCombat : MonoBehaviour
         GetComponent<HeroKnight>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
+
+        CheckPointOpenShop.isOpenShop = false;  //not allow open shop
 
         playerAnimator.SetTrigger("Death");
     }

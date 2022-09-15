@@ -9,6 +9,10 @@ public class Shop_WarningUI : MonoBehaviour
     public void Yes()
     {
         shopUI.SetActive(false);
+
+        //enabled player moving
+        FindObjectOfType<HeroKnight>().enabled = true;
+        PlayerCombat.Instance.GetComponent<Rigidbody2D>().simulated = true;
     }
 
     // use at button NO of panWarning
