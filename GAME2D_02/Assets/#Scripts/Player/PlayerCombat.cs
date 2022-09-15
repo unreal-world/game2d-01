@@ -84,10 +84,10 @@ public class PlayerCombat : MonoBehaviour
         {
             this.Death();
 
-            Items.loadCurrentItems = true;   
+            Items.loadCurrentItems = true;
 
-            PlayerPrefs.SetInt("currentHP", maxHealth);//mean that player has full HP when replay the scene
-            
+            SavePlayerStats();
+
             Invoke("RePlay", 1f);
         }
         else if(currentHealth <= 0 && items.heartAmount <= 1)
@@ -98,6 +98,13 @@ public class PlayerCombat : MonoBehaviour
 
             Invoke("GameOver", 1f);
         }
+    }
+
+    void SavePlayerStats()
+    {
+        PlayerPrefs.SetInt("maxHP", maxHealth);
+        PlayerPrefs.SetInt("currentHP", maxHealth);//mean that player has full HP when replay the scene
+        PlayerPrefs.SetInt("ATK", attackDamage);
     }
 
     void GameOver()
