@@ -10,9 +10,9 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        sceneFader.FadeTo(levelToLoad);
-
         PlayerPrefs.DeleteAll();
+
+        sceneFader.FadeTo(levelToLoad);
     }
 
     public void Quit()
