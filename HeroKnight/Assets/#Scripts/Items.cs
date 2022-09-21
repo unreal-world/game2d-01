@@ -38,7 +38,7 @@ public class Items : MonoBehaviour
 
     public void UseItemRestoreHP()
     {
-        if (hpAmount > 0)
+        if (hpAmount > 0 && PlayerCombat.Instance.currentHealth < PlayerCombat.Instance.maxHealth)
         {
             PlayerCombat.Instance.currentHealth += 50;
             hpAmount--;
