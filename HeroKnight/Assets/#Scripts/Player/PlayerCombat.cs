@@ -146,7 +146,12 @@ public class PlayerCombat : MonoBehaviour
         // Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponentInParent<EnemyCombat>().TakeDamage(attackDamage);
+            if (enemy.gameObject.CompareTag("Enemy"))
+                enemy.GetComponentInParent<EnemyCombat>().TakeDamage(attackDamage);
+            else if (enemy.gameObject.CompareTag("BossNinja"))
+                enemy.GetComponent<NinjaHealth>().TakeDamage(attackDamage);
+            else if (enemy.gameObject.CompareTag("BossDragonWarrior"))
+                enemy.GetComponent<DragonWarriorHealth>().TakeDamage(attackDamage);
         }
 
     }

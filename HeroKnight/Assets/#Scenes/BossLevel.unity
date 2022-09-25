@@ -1539,8 +1539,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 4.83033e-40, y: -9.66065e-40, z: 0, w: 1}
-  m_LocalPosition: {x: -409.5, y: 10.4800005, z: -20}
+  m_LocalRotation: {x: 4.9636e-40, y: -9.92718e-40, z: 0, w: 1}
+  m_LocalPosition: {x: -383.94, y: 11.96, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22532,7 +22532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &791937230
 MonoBehaviour:
@@ -23371,13 +23371,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970016013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -342.6, y: 4.4, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -354.92, y: 4.67, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971199688 stripped
 GameObject:
@@ -25173,7 +25173,7 @@ Transform:
   - {fileID: 1945547920}
   - {fileID: 130932967}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1473864767
 PrefabInstance:
@@ -25316,6 +25316,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1526578592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526578594}
+  - component: {fileID: 1526578593}
+  - component: {fileID: 1526578595}
+  m_Layer: 0
+  m_Name: BossTriggerPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1526578593
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526578592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.6417809, y: 0.8335221}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.343758, y: 2.6670437}
+  m_EdgeRadius: 0
+--- !u!4 &1526578594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526578592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -374.7694, y: 3.32, z: -0.17383072}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526578595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526578592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d329360bae31e074bb2e20df8674485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 6267453290416940468}
 --- !u!1 &1551340612
 GameObject:
   m_ObjectHideFlags: 0
@@ -27872,7 +27944,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 097737625e3c0e8419ccfffab34674a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.12, y: 2.56}
@@ -27894,9 +27966,12 @@ GameObject:
   - component: {fileID: 6267453290416940468}
   - component: {fileID: 6267453290416940475}
   - component: {fileID: 6267453290416940476}
-  m_Layer: 0
+  - component: {fileID: 6267453290416940479}
+  - component: {fileID: 6267453290416940480}
+  - component: {fileID: 6267453290416940481}
+  m_Layer: 7
   m_Name: BossNinja
-  m_TagString: Untagged
+  m_TagString: BossNinja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27909,12 +27984,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6267453290416940471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -355.12485, y: 16.088896, z: 0}
+  m_LocalPosition: {x: -354.92, y: 5.01, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6267453290416940475
 Rigidbody2D:
@@ -27963,6 +28038,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50045776, y: 1.7689834}
   m_EdgeRadius: 0
+--- !u!114 &6267453290416940479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267453290416940471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187a6aecf1fb53f4e8d651c69002295b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8413529788436622013}
+  isFlipped: 0
+--- !u!114 &6267453290416940480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267453290416940471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d061e1fac3dbed4ab22cce4473964ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  redAttackDamage: 10
+  strikeDamage: 10
+  attackOffset: {x: -2.66, y: 0, z: 0}
+  attackRange: 1.35
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &6267453290416940481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267453290416940471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f2f30387e00a248ad2eb2c1aec0972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaAnimator: {fileID: 6267453290416940468}
+  bossTransition: {fileID: 970016013}
+  maxHealth: 500
 --- !u!1001 &6774326026444925082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27972,7 +28096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6774326026731750272, guid: 1aa811e3f20a65f4397821ecaab75496, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6774326026731750272, guid: 1aa811e3f20a65f4397821ecaab75496, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28038,11 +28162,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 771515698646322793, guid: a023eaa00a569f4458ed3633e23f40ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -409.5
+      value: -383.94
       objectReference: {fileID: 0}
     - target: {fileID: 771515698646322793, guid: a023eaa00a569f4458ed3633e23f40ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.88
+      value: 9.36
       objectReference: {fileID: 0}
     - target: {fileID: 771515698646322793, guid: a023eaa00a569f4458ed3633e23f40ea, type: 3}
       propertyPath: m_LocalPosition.z
