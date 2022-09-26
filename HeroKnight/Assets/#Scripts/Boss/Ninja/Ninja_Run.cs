@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ninja_Run : StateMachineBehaviour
 {
     public float speed = 2.5f;
-    public static float attackRange = 5f;
+    public static float attackRange = 4f;
 
     Transform player;
     Rigidbody2D rb;

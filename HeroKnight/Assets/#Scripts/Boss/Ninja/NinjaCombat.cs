@@ -7,69 +7,66 @@ public class NinjaCombat : MonoBehaviour
     public int attackDamage = 20;
     public int redAttackDamage = 30;
     public int strikeDamage = 10;
-
-    public Vector3 attackOffset;
     public float attackRange = 1f;
-    public LayerMask attackMask;
+
+    public Transform attackPoint;
+    public LayerMask playerLayer;
 
     //Use in animation Attack
     public void Attack()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-
         // Detect player in range of attack
-        Collider2D[] colInfo = Physics2D.OverlapCircleAll(pos, attackRange, attackMask);
-        foreach (Collider2D player in colInfo)
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        foreach (Collider2D player in hitEnemies)
         {
-            if (player.CompareTag("Block"))
+            if (player.CompareTag("Player"))
+                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            else
                 return;
-            player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            //if (player.CompareTag("Block"))
+            //    return;
+            //player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
         }   
     }
 
     //Use in animation RedAttack
     public void RedAttack()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-
         // Detect player in range of attack
-        Collider2D[] colInfo = Physics2D.OverlapCircleAll(pos, attackRange, attackMask);
-        foreach (Collider2D player in colInfo)
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        foreach (Collider2D player in hitEnemies)
         {
-            if (player.CompareTag("Block"))
+            if (player.CompareTag("Player"))
+                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            else
                 return;
-            player.GetComponent<PlayerCombat>().TakeDamage(redAttackDamage);
+            //if (player.CompareTag("Block"))
+            //    return;
+            //player.GetComponent<PlayerCombat>().TakeDamage(redAttackDamage);
         }
     }
 
     //Use in animation Strike
     public void Strike()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-
         // Detect player in range of attack
-        Collider2D[] colInfo = Physics2D.OverlapCircleAll(pos, attackRange, attackMask);
-        foreach (Collider2D player in colInfo)
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        foreach (Collider2D player in hitEnemies)
         {
-            if (player.CompareTag("Block"))
+            if (player.CompareTag("Player"))
+                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            else
                 return;
-            player.GetComponent<PlayerCombat>().TakeDamage(strikeDamage);
-            
+            //if (player.CompareTag("Block"))
+            //    return;
+            //player.GetComponent<PlayerCombat>().TakeDamage(strikeDamage);
+
         }
     }
 
     void OnDrawGizmosSelected()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
 
-        Gizmos.DrawWireSphere(pos, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

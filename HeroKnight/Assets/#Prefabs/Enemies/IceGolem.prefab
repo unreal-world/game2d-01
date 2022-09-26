@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 7421655616530652064}
   m_Layer: 7
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 7421655617622221347}
   - component: {fileID: 7421655617622221346}
   - component: {fileID: 7421655617622221344}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: hotZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,6 +405,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxHealth: 50
+  currentHealth: 0
   attackRange: 0.99
   attackDamage: 15
   isInvulneralbe: 0

@@ -123,7 +123,7 @@ public class PlayerCombat : MonoBehaviour
         GameManager.RePlay();
     }
 
-    public void Death()
+    void Death()
     {
         items.heartAmount--;
 

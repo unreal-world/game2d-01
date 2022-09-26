@@ -9,7 +9,7 @@ public class EnemyCombat : MonoBehaviour
     public LayerMask playerLayers;
 
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
     public float attackRange = 0.5f;
     public int attackDamage = 20;
     public bool isInvulneralbe = false;

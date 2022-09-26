@@ -18,7 +18,9 @@ public class Ninja_Idle : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(BossTriggerPoint.isBossTrigger)
+        boss.LookAtPlayer();
+
+        if (BossTriggerPoint.isBossTrigger)
         {
             if (Vector2.Distance(player.position, rb.position) > Ninja_Run.attackRange)
             {
@@ -27,7 +29,7 @@ public class Ninja_Idle : StateMachineBehaviour
             else
             {
                 animator.SetTrigger("Strike");
-            }
+            }                     
         }
     }
 

@@ -21,6 +21,4 @@ public class LimitDamage : StateMachineBehaviour
     {
         animator.GetComponent<EnemyCombat>().isInvulneralbe = false;
     }
-
-
 }

@@ -6,6 +6,11 @@ public class Block : MonoBehaviour
 {
     public Collider2D col;
 
+    private void Awake()
+    {
+        col.enabled = false;
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire2"))
