@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public Animator playerAnimator;
     public HealthBar healthBar;
     public Items items;
+    public GameObject hpRestore;
 
     public float attackRange = 0.5f;
     public int maxHealth = 100;

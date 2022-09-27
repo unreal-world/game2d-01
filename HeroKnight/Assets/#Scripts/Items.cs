@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Items : MonoBehaviour
 {
-    [HideInInspector]
+
     public int heartAmount = 1;
     [HideInInspector]
     public int hpAmount = 0;
@@ -40,11 +40,19 @@ public class Items : MonoBehaviour
     {
         if (hpAmount > 0 && PlayerCombat.Instance.currentHealth < PlayerCombat.Instance.maxHealth)
         {
+            PlayerCombat.Instance.hpRestore.SetActive(true);
+            Invoke("DisableHpRestore", 0.8f);
+
             PlayerCombat.Instance.currentHealth += 50;
             hpAmount--;
             if (PlayerCombat.Instance.currentHealth > PlayerCombat.Instance.maxHealth)
                 PlayerCombat.Instance.currentHealth = PlayerCombat.Instance.maxHealth;
         }
+    }
+
+    void DisableHpRestore()
+    {
+        PlayerCombat.Instance.hpRestore.SetActive(false);
     }
 
     public void LoadCurrentItems()

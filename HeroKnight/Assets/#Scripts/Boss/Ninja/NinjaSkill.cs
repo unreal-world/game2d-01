@@ -30,7 +30,7 @@ public class NinjaSkill : MonoBehaviour
             timer = initTimer;
 
             ninjaAnimator.SetBool("Skill", true);
-            Invoke("Skill", 1.3f);      //hardcode                        
+            Invoke("Skill", 0.5f);      //hardcode                        
         }
 
         if (count >= 5)

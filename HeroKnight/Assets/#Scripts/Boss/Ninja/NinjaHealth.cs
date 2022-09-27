@@ -7,6 +7,9 @@ public class NinjaHealth : MonoBehaviour
     public Animator ninjaAnimator;
     public NinjaHealthBarUI ninjaHealthBarUI;
     public GameObject ninjaBossUI;
+    public GameObject goToCreditPrefab;
+    public GameObject wonUI;
+    public GameObject loadNextScene;
 
     public int maxHealth = 500;
     public float timer = 1f;    //The time boss is not damaged
@@ -29,6 +32,7 @@ public class NinjaHealth : MonoBehaviour
     {
         if (isVulnerable == false)
             LimitDamage();
+
         if (BossTriggerPoint.isBossTrigger)
             ninjaBossUI.SetActive(true);
     }
@@ -59,12 +63,28 @@ public class NinjaHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             ninjaAnimator.SetTrigger("Die");           
-            Invoke("Die", 1f);
+            Invoke("Die", 1.3f);
         }
     }
 
     void Die()
     {
-        Destroy(gameObject);
+        this.gameObject.SetActive(false);
+        ninjaBossUI.SetActive(false);
+        Invoke("EnableWonUI", 0.5f);
+        Invoke("EnableGoToCredit", 2f);
+    }
+
+    void EnableGoToCredit()
+    {
+        Instantiate(goToCreditPrefab, this.gameObject.transform.position, this.gameObject.transform.rotation);
+
+        loadNextScene.SetActive(true);
+        loadNextScene.transform.position = this.gameObject.transform.position;  //set position of loadNextScene
+    }
+
+    void EnableWonUI()
+    {
+        wonUI.SetActive(true);
     }
 }
