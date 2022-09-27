@@ -8,7 +8,7 @@ public class ShopUIAudio : MonoBehaviour
 
     private void Start()
     {
-        Invoke("OpenAudio", 0.5f);
+        Invoke("OpenAudio", 0.7f);
     }
 
     public void OpenAudio()
