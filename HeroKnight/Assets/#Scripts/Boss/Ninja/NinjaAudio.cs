@@ -5,7 +5,7 @@ using UnityEngine;
 public class NinjaAudio : MonoBehaviour
 {
     public AudioSource sourceAudio;
-    public AudioClip strike, run, attack, skill;
+    public AudioClip strike, run, attack, skill, die;
 
     public void RunAudio()
     {
@@ -28,6 +28,12 @@ public class NinjaAudio : MonoBehaviour
     public void SkillAudio()
     {
         sourceAudio.clip = skill;
+        sourceAudio.Play();
+    }
+
+    public void DieAudio()
+    {
+        sourceAudio.clip = die;
         sourceAudio.Play();
     }
 
