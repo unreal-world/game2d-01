@@ -5,7 +5,7 @@ using UnityEngine;
 public class Blast : MonoBehaviour
 {
     public float speed = 15f;
-    public int skillDamage = 20;
+    public int skillDamage = 13;
     public Rigidbody2D rb;
 
     // Use this for initialization

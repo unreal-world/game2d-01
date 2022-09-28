@@ -7,7 +7,7 @@ public class Credit : MonoBehaviour
 
     private void Awake()
     {
-        timer = 22f;
+        timer = 25f;
     }
 
     private void Update()

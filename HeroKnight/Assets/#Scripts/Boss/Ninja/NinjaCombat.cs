@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NinjaCombat : MonoBehaviour
 {
-    public int attackDamage = 20;
-    public int redAttackDamage = 30;
-    public int strikeDamage = 10;
+    public int attackDamage = 10;
+    public int redAttackDamage = 15;
+    public int strikeDamage = 12;
     public float attackRange = 1f;
 
     public Transform attackPoint;
@@ -37,7 +37,7 @@ public class NinjaCombat : MonoBehaviour
         foreach (Collider2D player in hitEnemies)
         {
             if (player.CompareTag("Player"))
-                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+                player.GetComponent<PlayerCombat>().TakeDamage(redAttackDamage);
             else
                 return;
             //if (player.CompareTag("Block"))
@@ -54,7 +54,7 @@ public class NinjaCombat : MonoBehaviour
         foreach (Collider2D player in hitEnemies)
         {
             if (player.CompareTag("Player"))
-                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+                player.GetComponent<PlayerCombat>().TakeDamage(strikeDamage);
             else
                 return;
             //if (player.CompareTag("Block"))
