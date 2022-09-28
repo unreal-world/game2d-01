@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.DeleteAll();
 
-        CheckPointOpenShop.isOpenShop = true;   //allow open shopUI
-
         Time.timeScale = 0f;
     }
 

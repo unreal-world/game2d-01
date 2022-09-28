@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 1.5
   moveSpeed: 2
-  timer: 1.5
+  timer: 1.25
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
   target: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3005768866163069912}
   - component: {fileID: 3005768866163069915}
   - component: {fileID: 3005768866163069914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hotZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 3005768866631453094}
   - component: {fileID: 3005768866631453089}
   - component: {fileID: 3005768866631453088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: triggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}

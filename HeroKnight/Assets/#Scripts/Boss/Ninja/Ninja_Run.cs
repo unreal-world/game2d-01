@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ninja_Run : StateMachineBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 4f;
     public static float attackRange = 4f;
 
     Transform player;

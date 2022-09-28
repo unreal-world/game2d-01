@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7421655616472758455}
   - component: {fileID: 7421655616472758454}
   - component: {fileID: 7421655616472758452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: triggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 7421655617622221347}
   - component: {fileID: 7421655617622221346}
   - component: {fileID: 7421655617622221344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hotZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
   playerLayers:
     serializedVersion: 2
     m_Bits: 64
-  maxHealth: 50
+  maxHealth: 60
   currentHealth: 0
   attackRange: 0.99
   attackDamage: 15

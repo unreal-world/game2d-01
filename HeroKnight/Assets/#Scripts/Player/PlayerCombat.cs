@@ -134,8 +134,6 @@ public class PlayerCombat : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
 
-        CheckPointOpenShop.isOpenShop = false;  //not allow open shop
-
         playerAnimator.SetTrigger("Death");
     }
 

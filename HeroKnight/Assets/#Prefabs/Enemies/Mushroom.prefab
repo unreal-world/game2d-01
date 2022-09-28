@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 9003978336654063927}
   - component: {fileID: 9003978336654063924}
   - component: {fileID: 9003978336654063925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: triggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 9003978337774406710}
   - component: {fileID: 9003978337774406711}
   - component: {fileID: 9003978337774406708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hotZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

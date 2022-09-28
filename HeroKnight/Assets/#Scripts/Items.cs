@@ -66,7 +66,7 @@ public class Items : MonoBehaviour
 
     public void LoadItemsDefault()
     {
-        heartAmount = 1;
+        heartAmount = 2;
         hpAmount = 0;
         coinAmount = 0;
     }

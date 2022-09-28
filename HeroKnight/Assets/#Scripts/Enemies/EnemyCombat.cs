@@ -40,7 +40,6 @@ public class EnemyCombat : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Die");
         Destroy(gameObject);
     }
 

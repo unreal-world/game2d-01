@@ -552,10 +552,70 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n\nTHANK YOU FOR PLAYING\n\n\n\n\n\n\n\nSPECIAL THANKS\n\nBrackeys\n\nSid\n\nOOO
-    Superposition Principle Inc\n\nStartled Pixels\r\n\nSven Thole\r\n\nKin Ng\r\n\nDustyroom\r\n\nDucVu
-    FX\r\n\nB.G.M\n\nand more\n\n\n\n\n\nThe game may contain some problems and bugs.\nI'm
-    sorry about that.\n\n\n\nTHE GAME MADE BY\n\nNguy\u1EC5n V\u0103n Ho\xE0i "
+  m_Text: '
+
+
+    THANK YOU FOR PLAYING
+
+
+
+
+
+
+
+
+    SPECIAL THANKS
+
+
+    Brackeys
+
+
+    Sid
+
+
+    OOO
+    Superposition Principle Inc
+
+
+    Startled Pixels
+
+
+    Sven Thole
+
+
+    Kin
+    Ng
+
+
+    Dustyroom
+
+
+    DucVu FX
+
+
+    B.G.M
+
+
+    and more
+
+
+
+
+
+
+    The
+    game may contain some problems and bugs.
+
+    I''m sorry about that.
+
+
+
+
+    THE
+    GAME MADE BY
+
+
+    Nguyen Van Hoai'
 --- !u!222 &1072557178
 CanvasRenderer:
   m_ObjectHideFlags: 0
