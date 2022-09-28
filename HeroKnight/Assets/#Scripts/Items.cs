@@ -68,6 +68,6 @@ public class Items : MonoBehaviour
     {
         heartAmount = 1;
         hpAmount = 0;
-        coinAmount = 0;
+        coinAmount = 3;
     }
 }

@@ -7,11 +7,6 @@ public class CheckPointOpenShop : MonoBehaviour
 
     public static bool isOpenShop = true;
 
-    private void Awake()
-    {
-        isOpenShop = true;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && isOpenShop == true)

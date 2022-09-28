@@ -21,10 +21,10 @@ public class ShopUI : MonoBehaviour
     //Button BuyATK in ShopUI
     public void BuyATK()
     {
-        if(item.coinAmount >= 1)
+        if(item.coinAmount >= 2)
         {
             PlayerCombat.Instance.attackDamage += 5;
-            item.coinAmount--;
+            item.coinAmount = item.coinAmount - 2;          
             audioSource.BuyItemAudio();
         }
     }
@@ -32,10 +32,10 @@ public class ShopUI : MonoBehaviour
     //Button BuyHP in ShopUI
     public void BuyHP()
     {
-        if(item.coinAmount >= 2)
+        if(item.coinAmount >= 1)
         {
             item.hpAmount++;
-            item.coinAmount = item.coinAmount - 2;
+            item.coinAmount--;
             audioSource.BuyItemAudio();
         }
     }
